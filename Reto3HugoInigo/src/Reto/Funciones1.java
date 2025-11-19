@@ -20,12 +20,24 @@ public class Funciones1 {
 	
 	public static void menu1(Scanner sc) {
 		String nombre;
-		
+		String corta="";
+		boolean pri =true;
 		do {
 			System.out.println("dime un nombre ");
 		 nombre = sc.nextLine();
-		} while (!("".isEmpty()));
+		 if (!(nombre.isEmpty())) {
+			 
+		 }
+		 if (pri) {
+			 corta=nombre;
+			 pri=false; 
+		 } 
+		 else	 if (nombre.length()<corta.length()) {
+			 corta=nombre;
+		 }
+		} while (!(nombre.isEmpty()));
 		
+		System.out.println("la corta es: "+ corta);
 		System.out.println(Funciones1.capitalizarString(nombre));
 		System.out.println("apodo: " + Funciones1.generarApodo(nombre));
 		

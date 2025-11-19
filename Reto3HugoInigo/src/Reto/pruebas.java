@@ -9,11 +9,8 @@ public class pruebas {
 
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("dime una ");
-		String palabra = sc.nextLine();
-		System.out.println(Funciones1.generarApodo(palabra));
-		System.out.println(Funciones1.capitalizarString(palabra));
 		
+		Funciones1.menu1(sc);
 	}
 	
 }
