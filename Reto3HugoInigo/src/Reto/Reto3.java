@@ -1,13 +1,46 @@
 package Reto;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Reto3 {
 
 	public static void main(String[] args) {
+<<<<<<< HEAD
+			Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+			int opcion = 1;
+			do {
+			String menu = """ 
+					Analizar:
+					1. Palabras
+					2. Frases
+					0. Salir
+					""";
+			System.out.println(menu);
+			opcion = Funciones.dimeEntero("Opcion: ", sc);
+				switch (opcion) {
+				default -> System.out.println("Opcion no valida"); 
+				case 1 -> Funciones1.menu1(sc);
+				case 2 -> Funciones2.menu2(sc);
+				}
+			} while (opcion!=0);
+=======
 		// TODO Auto-generated method stub   
 		
 		
+>>>>>>> branch 'main' of https://github.com/InigoGBC/Reto3HugoInigo.git
 	
 
 	}
 
+	public static void palabras() {
+		
+		
+		
+		
+	}
+	
+	
+	
+	
 }
