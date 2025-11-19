@@ -19,7 +19,8 @@ public class Reto3 {
 			opcion = Funciones.dimeEntero("Opcion: ", sc);
 				switch (opcion) {
 				default -> System.out.println("Opcion no valida"); 
-				case 1 -> Funciones2.invertirFrase(sc);
+				case 1 -> Funciones1.menu1(sc);
+				case 2 -> Funciones2.menu2(sc);
 				}
 			} while (opcion!=0);
 		
