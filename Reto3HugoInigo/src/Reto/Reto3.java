@@ -23,9 +23,7 @@ public class Reto3 {
 				case 2 -> Funciones2.menu2(sc);
 				}
 			} while (opcion!=0);
-		
-		
-		
+	
 
 	}
 

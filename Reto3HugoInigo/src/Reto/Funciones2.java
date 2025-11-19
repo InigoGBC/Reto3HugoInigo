@@ -1,14 +1,29 @@
 package Reto;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Funciones2 {
 
+	public static void palabraLarga(Scanner sc) {
+		String palabra = " ";
+		String larga = " ";
+		String frase = " "+sc.nextLine()+" ";
+		for (int i = 0; i < frase.length(); i++) {
+			if (frase.charAt(i) != ' ') {
+				palabra+=frase.charAt(i);
+			} else {
+				if (palabra.length()>larga.length()) {
+					larga=palabra;
+				}
+				palabra="";
+			}	
+		}
+		System.out.println("La palabra mas larga es "+larga+" con "+larga.length()+" caracteres");
+	}
+	
 	public static void contarPalabras(Scanner sc) {
 		int espacios = 0;
-		String frase = sc.nextLine();
-		frase+=" ";
+		String frase = sc.nextLine()+" ";
 		for (int i = 0; i < frase.length(); i++) {
 			if (frase.charAt(i) != ' ') {
 			} else {
@@ -19,7 +34,6 @@ public class Funciones2 {
 	}
 
 	public static void invertirFrase(Scanner sc) {
-		int aux = 0;
 		String inverso = "";
 		String frase = " "+sc.nextLine()+" ";
 		for (int i = frase.length()-2; i >= 0; i--) {
@@ -33,8 +47,7 @@ public class Funciones2 {
 		System.out.println(inverso);
 	}
 	
-	public static void menu2() {
-		Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+	public static void menu2(Scanner sc) {
 		int opcion = 1;
 		do {
 		String menu = """ 
@@ -50,6 +63,7 @@ public class Funciones2 {
 			default -> System.out.println("Opcion no valida"); 
 			case 1 -> contarPalabras(sc);
 			case 2 -> invertirFrase(sc);
+			case 3 -> palabraLarga(sc);
 			}
 		} while (opcion!=0);
 	}
